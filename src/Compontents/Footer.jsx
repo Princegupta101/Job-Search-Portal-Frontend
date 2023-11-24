@@ -8,30 +8,31 @@ function Footer(){
 
     return(
         <>
-            <footer className=' relative left-0 bottom-0 h-[25vh] sm:h-[15vh]  py-5 sm:px-20 flex flex-col  sm:flex-row items-center justify-between text-white  bg-blue-600'>
+            <footer className=' relative left-0 bottom-0 h-[30vh] sm:h-[18vh]  py-5 sm:px-20 flex flex-col  sm:flex-row items-center justify-between text-white   bg-blue-600'>
                 
-                <section className=' w-64 flex items-center justify-center'>
-                    <img src={footerimg} alt="image" />
+                <section className=' flex flex-col items-center justify-center'>
+                    <img src={footerimg} alt="image" className='w-64 ' />
+                    Copyright {year} | All rights resvered
                 </section>
 
                 <section>
-                        Copyright {year} | All rights resvered
+                    <header className="footer-title text-xl flex flex-col items-center justify-center">Social</header> 
+                    <div className="grid grid-flow-col gap-6" >
+                        <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300  '>
+                            <BsFacebook className='h-6 w-6'/>
+                        </a>
+                        <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300'>
+                            <BsInstagram className='h-6 w-6'/>
+                        </a>
+                        <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300'>
+                            <BsLinkedin className='h-6 w-6'/>
+                        </a>
+                        <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300'>
+                            <BsTwitter className='h-6 w-6'/>
+                        </a>
+                    </div>
                 </section>
-              
-                <section className='flex mt-2 items-center justify-center gap-6 text-2xl text-white'>
-                    <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300'>
-                        <BsFacebook/>
-                    </a>
-                    <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300'>
-                        <BsInstagram/>
-                    </a>
-                    <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300'>
-                        <BsLinkedin/>
-                    </a>
-                    <a className=' hover:text-yellow-500 transition-all ease-in-out duration-300'>
-                        <BsTwitter/>
-                    </a>
-                </section>
+                
             </footer>
         </>
     )
