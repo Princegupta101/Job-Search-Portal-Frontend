@@ -1,6 +1,6 @@
 import {BsFacebook, BsInstagram,BsLinkedin, BsTwitter} from 'react-icons/bs';
 
-import footerimg from '../Assets/Image/FooterImage-removebg-preview.png'
+import footerimg from '../Assets/Image/FooterImage-removebg-preview1.png'
 
 function Footer(){
     const currentDate = new Date();
@@ -8,7 +8,7 @@ function Footer(){
 
     return(
         <>
-            <footer className=' relative left-0 bottom-0 h-[30vh] sm:h-[18vh]  py-5 sm:px-20 flex flex-col  sm:flex-row items-center justify-between text-white   bg-blue-600'>
+            <footer className=' relative left-0 bottom-0 h-[30vh] sm:h-[18vh]  py-5 sm:px-20 flex flex-col  sm:flex-row items-center justify-between  bg-neutral text-neutral-content'>
                 
                 <section className=' flex flex-col items-center justify-center'>
                     <img src={footerimg} alt="image" className='w-64 ' />
