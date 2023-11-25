@@ -32,66 +32,68 @@ function HomeLayout({ children }) {
     }
 
     return (
-                <div className="navbar h-[12vh]  flex  justify-between items-center bg-neutral text-neutral-content ">
+                <div>
+                    <div className="navbar h-[12vh]  flex  justify-between items-center bg-neutral text-neutral-content ">
 
-                    <div className="">
-                        <a className="btn btn-ghost text-xl px-0"><img src={footerimg} alt="image" className=' sm:w-64 w-56' /></a>
-                    </div>
-                    
-                    <div className='   text-xl flex  gap-8'>
-                                <Link to="/" className='hidden sm:block'>Home</Link>
-                                <Link to="/deshboard" className='hidden sm:block'>Dashboard</Link>
-                                <Link to="/postjob" className='hidden sm:block'>Post Job</Link>
-                                <Link to="/viewjob" className='hidden sm:block'>View Job</Link>
-                                <Link to="/about" className='hidden sm:block'>About Us</Link>
-                                <Link to="/contactus" className='hidden sm:block'>Contact Us</Link>
-                    </div>
-
-                    <div className="flex  justify-around items-center">
-
-                        <div className="dropdown dropdown-end">
-                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                            <div className="sm:w-10 sm:rounded-full ">
-                             <img alt="Navbar " className=' hidden sm:block' src={avatar} />
-                             <FiMenu 
-                                onClick={changeWidth}
-                                size={"32px"}
-                                className="font-bold text-white m-4 sm:hidden"
-                              />
-                            </div>
-                        </label>
-                        <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-                            {!isLoggegIn &&(
-                            <li >
-                                <div className='w-full flex items-center justify-between flex-col'>
-                                    <Link to="/" className='sm:hidden'>Home</Link>
-                                    <Link to="/deshboard" className='sm:hidden'>Dashboard</Link>
-                                    <Link to="/postjob" className='sm:hidden'>Post Job</Link>
-                                    <Link to="/viewjob" className='sm:hidden'>View Job</Link>
-                                    <Link to="/about" className='sm:hidden'>About Us</Link>
-                                    <Link to="/contactus" className='sm:hidden'>Contact Us</Link>
-                                    <Link to="/login">Login</Link>
-                                    <Link to="/singup">Singup</Link>
-                                </div>
-                            </li>
-                        )}
-
-                        {isLoggegIn &&(
-                            <li >
-                                <div className='w-full flex items-center justify-betweenflex-col'>
-                                    <Link to="/user/proflie">Profile</Link>
-                                    <Link  onClick={handleLogout}>Logout</Link>
-                                </div>
-                            </li>
-                        )}
-                        </ul>
+                        <div className="">
+                            <a className="btn btn-ghost text-xl px-0"><img src={footerimg} alt="image" className=' sm:w-64 w-56' /></a>
                         </div>
-                    </div>
-            
+                        
+                        <div className='   text-xl flex  gap-8'>
+                                    <Link to="/" className='hidden lg:block'>Home</Link>
+                                    <Link to="/deshboard" className='hidden lg:block'>Dashboard</Link>
+                                    <Link to="/postjob" className='hidden lg:block'>Post Job</Link>
+                                    <Link to="/viewjob" className='hidden lg:block'>View Job</Link>
+                                    <Link to="/about" className='hidden lg:block'>About Us</Link>
+                                    <Link to="/contactus" className='hidden lg:block'>Contact Us</Link>
+                        </div>
+
+                        <div className="flex  justify-around items-center">
+
+                            <div className="dropdown dropdown-end">
+                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <div className="lg:w-10 lg:rounded-full ">
+                                <img alt="Navbar " className=' hidden lg:block' src={avatar} />
+                                <FiMenu 
+                                    onClick={changeWidth}
+                                    size={"32px"}
+                                    className="font-bold text-white m-4 lg:hidden"
+                                />
+                                </div>
+                            </label>
+                            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content  text-black bg-base-100 rounded-box w-52">
+                                {!isLoggegIn &&(
+                                <li >
+                                    <div className='w-full flex items-center justify-between flex-col'>
+                                        <Link to="/" className='lg:hidden'>Home</Link>
+                                        <Link to="/deshboard" className='lg:hidden'>Dashboard</Link>
+                                        <Link to="/postjob" className='lg:hidden'>Post Job</Link>
+                                        <Link to="/viewjob" className='lg:hidden'>View Job</Link>
+                                        <Link to="/about" className='lg:hidden'>About Us</Link>
+                                        <Link to="/contactus" className='lg:hidden'>Contact Us</Link>
+                                        <Link to="/login">Login</Link>
+                                        <Link to="/singup">Singup</Link>
+                                    </div>
+                                </li>
+                            )}
+
+                            {isLoggegIn &&(
+                                <li >
+                                    <div className='w-full flex items-center justify-betweenflex-col'>
+                                        <Link to="/user/proflie">Profile</Link>
+                                        <Link  onClick={handleLogout}>Logout</Link>
+                                    </div>
+                                </li>
+                            )}
+                            </ul>
+                            </div>
+                        </div>
+                    </div>   
+                
 
                     { children }
 
-                    {/* <Footer /> */}
+                    <Footer />
                 </div>
     );
 }

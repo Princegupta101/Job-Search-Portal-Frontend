@@ -1,17 +1,12 @@
 
-import Footer from './Compontents/Footer'
 import HomeLayout from './Layouts/HomeLayout'
+import HomePage from './Pages/HomePage'
 
 import './App.css'
 
 function App() {
   return (
-    <>
-       {/* Job-Search-Portal-Frontend */}
-     <HomeLayout/>
-   
-    <Footer/>
-    </>
+    <HomePage/>
   )
 }
 

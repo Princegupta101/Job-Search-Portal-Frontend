@@ -8,7 +8,7 @@ function Footer(){
 
     return(
         <>
-            <footer className=' relative left-0 bottom-0 h-[30vh] sm:h-[18vh]  py-5 sm:px-20 flex flex-col  sm:flex-row items-center justify-between  bg-neutral text-neutral-content'>
+            <footer className=' relative left-0 bottom-0 h-[25vh] sm:h-[15vh]  py-5 sm:px-20 flex flex-col  sm:flex-row items-center justify-between  bg-neutral text-neutral-content'>
                 
                 <section className=' flex flex-col items-center justify-center'>
                     <img src={footerimg} alt="image" className='w-64 ' />
