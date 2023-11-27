@@ -33,68 +33,66 @@ function HomeLayout({ children }) {
 
     return (
                 <div>
-                    <div className="navbar h-[12vh]  flex  justify-between items-center bg-neutral text-neutral-content ">
+                    <div className="navbar h-[12vh] flex justify-between items-center bg-neutral text-neutral-content">
 
                         <div className="">
-                            <a className="btn btn-ghost text-xl px-0"><img src={footerimg} alt="image" className=' sm:w-64 w-56' /></a>
-                        </div>
-                        
-                        <div className='   text-xl flex  gap-8'>
-                                    <Link to="/" className='hidden lg:block'>Home</Link>
-                                    <Link to="/deshboard" className='hidden lg:block'>Dashboard</Link>
-                                    <Link to="/postjob" className='hidden lg:block'>Post Job</Link>
-                                    <Link to="/viewjob" className='hidden lg:block'>View Job</Link>
-                                    <Link to="/about" className='hidden lg:block'>About Us</Link>
-                                    <Link to="/contactus" className='hidden lg:block'>Contact Us</Link>
+                            <a className="btn btn-ghost text-xl px-0">
+                                <img src={footerimg} alt="image" className='w-56 lg:w-64' />
+                            </a>
                         </div>
 
-                        <div className="flex  justify-around items-center">
+                        <div className='text-xl  gap-8 hidden lg:flex'>
+                            <Link to="/">Home</Link>
+                            <Link to="/dashboard">Dashboard</Link>
+                            <Link to="/postjob">Post Job</Link>
+                            <Link to="/viewjob">View Job</Link>
+                            <Link to="/about">About Us</Link>
+                            <Link to="/contactus">Contact Us</Link>
+                        </div>
 
+                        <div className="flex justify-around items-center">
                             <div className="dropdown dropdown-end">
-                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                <div className="lg:w-10 lg:rounded-full ">
-                                <img alt="Navbar " className=' hidden lg:block' src={avatar} />
-                                <FiMenu 
-                                    onClick={changeWidth}
-                                    size={"32px"}
-                                    className="font-bold text-white m-4 lg:hidden"
-                                />
-                                </div>
-                            </label>
-                            <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content  text-black bg-base-100 rounded-box w-52">
-                                {!isLoggegIn &&(
-                                <li >
-                                    <div className='w-full flex items-center justify-between flex-col'>
-                                        <Link to="/" className='lg:hidden'>Home</Link>
-                                        <Link to="/deshboard" className='lg:hidden'>Dashboard</Link>
-                                        <Link to="/postjob" className='lg:hidden'>Post Job</Link>
-                                        <Link to="/viewjob" className='lg:hidden'>View Job</Link>
-                                        <Link to="/about" className='lg:hidden'>About Us</Link>
-                                        <Link to="/contactus" className='lg:hidden'>Contact Us</Link>
-                                        <Link to="/login">Login</Link>
-                                        <Link to="/singup">Singup</Link>
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="lg:w-10 lg:rounded-full">
+                                        <img alt="Navbar" className='hidden lg:block' src={avatar} />
+                                        <FiMenu
+                                            onClick={changeWidth}
+                                            size={"32px"}
+                                            className="font-bold text-white m-4 lg:hidden"
+                                        />
                                     </div>
-                                </li>
-                            )}
+                                </label>
+                                <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm  dropdown-content  justify-center items-center text-black bg-base-100 rounded-box w-52">
+                                         <li><Link to="/" className='lg:hidden'>Home</Link></li>
+                                         <li><Link to="/deshboard" className='lg:hidden'>Dashboard</Link></li>
+                                         <li><Link to="/postjob" className='lg:hidden'>Post Job</Link></li>
+                                         <li><Link to="/viewjob" className='lg:hidden'>View Job</Link></li>
+                                         <li><Link to="/about" className='lg:hidden'>About Us</Link></li>
+                                         <li><Link to="/contactus" className='lg:hidden'>Contact Us</Link></li>
+                                         
+                                         {!isLoggegIn &&(                                        
+                                            <div>
+                                                <li><Link to="/login">Login</Link></li>
+                                                <li><Link to="/singup">Singup</Link></li> 
+                                            </div>
+                                    )}
 
-                            {isLoggegIn &&(
-                                <li >
-                                    <div className='w-full flex items-center justify-betweenflex-col'>
-                                        <Link to="/user/proflie">Profile</Link>
-                                        <Link  onClick={handleLogout}>Logout</Link>
-                                    </div>
-                                </li>
-                            )}
-                            </ul>
+                                    {isLoggegIn &&(
+                                        <div>
+                                                <li><Link to="/user/proflie">Profile</Link></li>
+                                                <li><Link  onClick={handleLogout}>Logout</Link></li>
+                                        </div>
+                                    )}
+                                </ul>
                             </div>
                         </div>
-                    </div>   
-                
+                    </div>
 
-                    { children }
+                    {children}
 
                     <Footer />
                 </div>
+
     );
 }
 
