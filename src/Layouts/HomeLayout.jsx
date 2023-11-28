@@ -17,11 +17,6 @@ function HomeLayout({ children }) {
 
     // for displaying the options acc to role
     const role = useSelector((state)=>state?.auth?.role);
-
-    function changeWidth() {
-        const drawerSide = document.getElementsByClassName("drawer-side");
-        drawerSide[0].style.width = 'auto';
-    }
     
     function handleLogout (e){
         e.preventDefault();
@@ -56,7 +51,6 @@ function HomeLayout({ children }) {
                                     <div className="lg:w-10 lg:rounded-full">
                                         <img alt="Navbar" className='hidden lg:block' src={avatar} />
                                         <FiMenu
-                                            onClick={changeWidth}
                                             size={"32px"}
                                             className="font-bold text-white m-4 lg:hidden"
                                         />
