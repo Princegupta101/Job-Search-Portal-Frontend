@@ -105,7 +105,7 @@ function Singup(){
     return(
         <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
             <form onSubmit={createNewAccount} className="flex flex-col items-center w-80   sm:w-96  gap-3  p-5 bg-gray-800 rounded-lg shadow-lg">
-            <h1 className="text-3xl font-bold text-blue-500">Singup Page</h1>
+            <h1 className="text-3xl font-bold text-blue-500">Signup Page</h1>
             <label htmlFor="image_uploads" className="cursor-pointer">
                 {prevImage ? (
                 <img className="w-24 h-24 rounded-full" src={prevImage} alt="Profile Preview" />
@@ -193,7 +193,7 @@ function Singup(){
                 </button>
                 <p className="mt-4">
                 Already have an account?{' '}
-                <Link to="/login" className="text-yellow-400 hover:underline">
+                <Link to="/signin" className="text-yellow-400 hover:underline">
                     Login
                 </Link>
                 </p>

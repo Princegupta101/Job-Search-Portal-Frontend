@@ -26,10 +26,37 @@ export const creatAccount =createAsyncThunk("/auth/singup", async(data)=>{
     }
 })
 
+export const signIn =createAsyncThunk("/auth/singin", async(data)=>{
+    try {
+        const res =axiosInstance.post("user/singin", data);
+        toast.promise(res,{
+            loading:"wait authentication in process..... ",
+            success:(data)=>{
+                return data?.data?.message;
+            },
+            error:"Failed to login"
+        })
+        return(await res).data;
+        
+    } catch (error) {
+        toast.error(error?.response?.data?.message);
+    }
+})
+
 const authSlice = createSlice({
     name: 'auth',
     initialState,
     reducers:{},
+    extraReducers:(builder)=>{
+        builder.addCase(signIn.fulfilled, (state, action)=>{
+            localStorage.setItem("data", JSON.stringify(action?.payload?.user));
+            localStorage.setItem("isLoggedIn", true);
+            state.isLoggedIn=true;
+            state.data=action?.payload?.user;
+
+        })
+
+    }
 });
 
 export const { }= authSlice.actions;

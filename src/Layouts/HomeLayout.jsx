@@ -66,8 +66,8 @@ function HomeLayout({ children }) {
                                          
                                          {!isLoggegIn &&(                                        
                                             <div>
-                                                <li><Link to="/login">Login</Link></li>
-                                                <li><Link to="/singup">Singup</Link></li> 
+                                                <li><Link to="/signin">Login</Link></li>
+                                                <li><Link to="/signup">Singup</Link></li> 
                                             </div>
                                     )}
 
