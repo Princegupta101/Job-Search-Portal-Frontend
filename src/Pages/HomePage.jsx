@@ -3,7 +3,6 @@ import { BsFillBookmarkFill } from 'react-icons/bs'
 
 import homeimage from '../Assets/Image/HomeMainImage.png'
 import HomeLayout from "../Layouts/HomeLayout";
-import AboutUs from './AboutUs';
 
 function HomePage(){
     return(

@@ -27,11 +27,11 @@ function AboutUs(){
                 <img src={AboutImage} alt="Team" className="rounded-lg shadow-lg w-full md:w-auto" />
                 </div>
             </div>
-            <div className="mt-12">
-                <h2 className="text-3xl lg:text-4xl font-bold  text-yellow-400 flex justify-center items-center mb-4 ">
+            <div className="mt-20">
+                <h2 className="text-3xl lg:text-4xl font-bold   text-yellow-400 flex justify-center items-center mb-14 ">
                 Meet Our Team
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="  grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {/* Team member cards */}
                 {Team && Team.map(mem => (<TeamCard 
                                                                         {...mem} 
