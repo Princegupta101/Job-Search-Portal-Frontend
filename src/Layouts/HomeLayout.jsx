@@ -6,6 +6,7 @@ import{useDispatch, useSelector} from 'react-redux'
 import footerimg from '../Assets/Image/FooterImage-removebg-preview1.png'
 import avatar from '../Assets/Image/avatarimg.jpg'
 import Footer from '../Compontents/Footer.jsx';
+import { logout } from '../Redux/Slices/AuthSlices.js';
 
 function HomeLayout({ children }) {
 
@@ -18,11 +19,10 @@ function HomeLayout({ children }) {
     // for displaying the options acc to role
     const role = useSelector((state)=>state?.auth?.role);
     
-    function handleLogout (e){
+    async function handleLogout (e){
         e.preventDefault();
-
-        // const res= await dispatch(logout());
-        // if(res?.payload?.sucess)
+        const res= await dispatch(logout());
+        if(res?.payload?.sucess)
         navigate("/");
     }
 
