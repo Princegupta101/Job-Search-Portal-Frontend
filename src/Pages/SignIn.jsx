@@ -45,7 +45,7 @@ function SignIn(){
     return(
         <div className="flex items-center justify-center min-h-screen bg-gray-900 text-white">
             <form onSubmit={onSignin} className="flex flex-col items-center w-80   sm:w-96  gap-3  p-5 bg-gray-800 rounded-lg shadow-lg">
-            <h1 className="text-3xl font-bold text-blue-500">Singin Page</h1>
+            <h1 className="text-3xl font-bold text-blue-500">SignIn Page</h1>
             <div className="w-full max-w-md">
 
                 <div className="flex flex-col gap-2">
@@ -88,7 +88,7 @@ function SignIn(){
                 <p className="mt-4">
                 Already have an account?{' '}
                 <Link to="/signup" className="text-yellow-400 hover:underline">
-                    Singup               
+                    Signup               
                  </Link>
                 </p>
             </div>

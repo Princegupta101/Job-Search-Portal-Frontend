@@ -7,7 +7,7 @@ import HomeLayout from "../Layouts/HomeLayout";
 function HomePage(){
     return(
         <HomeLayout>
-          <div className="text-white flex flex-col md:flex-row items-center justify-center md:gap-10 h-[80vh]" data-theme="dark">
+          <div className="text-white flex flex-col md:flex-row items-center justify-center md:gap-10 h-[80vh]" >
             <div className="sm:w-full md:w-2/3 flex flex-col justify-center items-center text-center md:text-left mb-8 md:mb-0">
                 <h1 className='font-extrabold text-4xl sm:text-5xl md:text-6xl mb-4'>
                     To Choose <span className='text-indigo-600 ml-2'>Right Jobs.</span>

@@ -1,6 +1,5 @@
-import { toast } from "react-hot-toast";
-
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-hot-toast";
 
 import axiosInstance  from "../../Helpers/axiosintance";
 
@@ -73,7 +72,7 @@ const authSlice = createSlice({
             state.data=action?.payload?.user;
 
         })
-        .addCase(logout,fulfilled, (state)=>{
+        .addCase(logout.fulfilled, (state)=>{
             localStorage.clear();
             state.data={};
             state.isLoggedIn=false;
@@ -83,5 +82,5 @@ const authSlice = createSlice({
     }
 });
 
-export const { }= authSlice.actions;
+export const {}= authSlice.actions;
 export default authSlice.reducer;

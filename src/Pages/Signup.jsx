@@ -4,6 +4,7 @@ import { BsPersonCircle } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
+import { isEmail, isPassword } from "../Helpers/regexMatcher";
 import { creatAccount } from "../Redux/Slices/AuthSlices";
 
 function Singup(){
@@ -69,15 +70,16 @@ function Singup(){
         }
 
         //email vaildtaion 
-        if (!signupData.email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)) {
+        if (!isEmail(signupData.email)) {
             toast.error("Invaild email id  ")
             return;
         }
 
-        // if(!isValidPassword(signupData.password)) {
-        //     toast.error("Password should be 6 - 16 character long with atleast a number and special character");
-        //     return;
-        // }
+        //checking password
+        if(!isPassword(signupData.password)){
+            toast.error("Password should be 6 - 16 character long with atleast a number and special character");
+            return;
+        }
 
         const formData = new FormData();
         formData.append("fullName", signupData.fullName);

@@ -1,14 +1,13 @@
 import {FiMenu} from 'react-icons/fi';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
-import{useDispatch, useSelector} from 'react-redux'
-
-import footerimg from '../Assets/Image/FooterImage-removebg-preview1.png'
 import avatar from '../Assets/Image/avatarimg.jpg'
+import footerimg from '../Assets/Image/FooterImage-removebg-preview1.png'
 import Footer from '../Compontents/Footer.jsx';
 import { logout } from '../Redux/Slices/AuthSlices.js';
 
-function HomeLayout({ children }) {
+function HomeLayout({children}) {
 
     const dispatch = useDispatch(); 
     const navigate = useNavigate();
@@ -42,7 +41,7 @@ function HomeLayout({ children }) {
                             <Link to="/postjob">Post Job</Link>
                             <Link to="/viewjob">View Job</Link>
                             <Link to="/about">About Us</Link>
-                            <Link to="/contactus">Contact Us</Link>
+                            <Link to="/contact">Contact Us</Link>
                         </div>
 
                         <div className="flex justify-around items-center">
@@ -82,8 +81,9 @@ function HomeLayout({ children }) {
                         </div>
                     </div>
 
-                    {children}
-
+                    <div data-theme="dark">
+                        {children}
+                    </div>
                     <Footer />
                 </div>
 
