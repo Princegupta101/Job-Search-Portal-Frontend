@@ -6,7 +6,7 @@ import HomeLayout from '../Layouts/HomeLayout';
 function AboutUs(){
     return(
         <HomeLayout>
-            <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+            <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 mt-[10vh]">
                 <div className="max-w-5xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>

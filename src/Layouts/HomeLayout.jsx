@@ -27,7 +27,7 @@ function HomeLayout({children}) {
 
     return (
                 <div>
-                    <div className="navbar h-[12vh] flex justify-between items-center bg-neutral text-neutral-content">
+                    <div className="navbar h-[10vh] flex justify-between items-center bg-neutral text-neutral-content fixed top-0 left-0 z-50">
 
                         <div className="">
                             <a className="btn btn-ghost text-xl px-0">

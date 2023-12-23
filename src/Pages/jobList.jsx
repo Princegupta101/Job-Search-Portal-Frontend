@@ -20,7 +20,7 @@ function  JobList () {
     },[])
   return (
         <HomeLayout>
-            <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+            <div className="min-h-screen mt-[10vh] py-12 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-5xl mx-auto">
                         <h2 className="text-5xl lg:text-4xl font-bold  text-yellow-400  flex justify-center items-center mb-14 ">
                                 Available Jobs
